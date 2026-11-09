@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Scanner | SecureNet</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/email_analyzer.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="logo">Secure<span>Net</span></a>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">▦ Dashboard</a>
+            <a href="url_scanner.html" class="nav-item active">🔗 URL Scanner</a>
+            <a href="email_analyzer.html" class="nav-item">✉ Email Analyzer</a>
+            <a href="reports.html" class="nav-item">▤ Reports</a>
+        </nav>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="nav-item">👤 My Profile</a>
+            <a href="#" class="nav-item">⚙ Settings</a>
+            <a href="index.html" class="nav-item">↪ Logout</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            SecureNet Protection Active
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div>
+                <h2>URL Security Scanner</h2>
+                <p>Inspect suspicious websites, link shorteners, spoofed domains, and IP hosts.</p>
+            </div>
+
+            <a href="profile.html" class="user-profile">
+                <div class="user-avatar" id="dashboardAvatar">U</div>
+                <span id="dashboardUserName">User</span>
+            </a>
+        </header>
+
+        <section class="analyzer-card">
+            <form id="urlScanForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="urlInput">Target URL or Domain</label>
+                    <input type="text" id="urlInput" class="form-input" placeholder="e.g. https://account-verification.login-portal.xyz/secure">
+                </div>
+
+                <button type="button" class="btn-analyze" id="scanUrlBtn">Scan URL</button>
+            </form>
+
+            <div class="result-box" id="urlResultBox">
+                <div class="verdict-header">
+                    <div>
+                        <span style="color: #94a3b8; font-size: 13px; display: block; margin-bottom: 4px;">Scan Verdict</span>
+                        <h3><span id="urlVerdictBadge" class="threat-type-badge">Analyzing...</span></h3>
+                    </div>
+                    <div>
+                        <span style="color: #94a3b8; font-size: 13px; display: block; margin-bottom: 4px;">Risk Level</span>
+                        <strong id="urlSeverityLabel" style="font-size: 16px;">Low</strong>
+                    </div>
+                </div>
+
+                <div class="meter-wrapper">
+                    <div class="meter-header">
+                        <span>Threat Risk Score</span>
+                        <strong id="urlScoreText">0%</strong>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="urlScoreBar"></div>
+                    </div>
+                </div>
+
+                <p id="parsedDomainLabel" style="color: #94a3b8; font-size: 14px; margin-top: 12px;"></p>
+
+                <div class="flags-section">
+                    <p class="flags-title">Security Indicators Detected:</p>
+                    <ul class="flags-list" id="urlFlagsList"></ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/scanner.js"></script>
+
+</body>
+</html>

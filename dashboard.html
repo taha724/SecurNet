@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SecureNet</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/email_analyzer.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="logo">Secure<span>Net</span></a>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item active">▦ Dashboard</a>
+            <a href="url_scanner.html" class="nav-item">🔗 URL Scanner</a>
+            <a href="email_analyzer.html" class="nav-item">✉ Email Analyzer</a>
+            <a href="reports.html" class="nav-item">▤ Reports</a>
+            <a href="training.html" class="nav-item">🎓 Awareness Hub</a>
+            <a href="pricing.html" class="nav-item">💼 Plans & Tiers</a>
+        </nav>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="nav-item">👤 My Profile</a>
+            <a href="#" class="nav-item">⚙ Settings</a>
+            <a href="index.html" class="nav-item">↪ Logout</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            SecureNet Protection Active
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <div>
+                <h2>Dashboard</h2>
+                <p>Monitor your digital security</p>
+            </div>
+
+            <!-- Clickable User Profile -->
+            <a href="profile.html" class="user-profile">
+                <div class="user-avatar" id="dashboardAvatar">U</div>
+                <span id="dashboardUserName">User</span>
+            </a>
+
+        </header>
+
+        <section class="welcome-section">
+            <div>
+                <h1>Welcome to SecureNet 👋</h1>
+                <p>Your digital security overview at a glance.</p>
+            </div>
+
+            <span class="security-label">● System Ready</span>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">⌕</div>
+                <p>Total Scans</p>
+                <h2 id="statTotalScans">0</h2>
+                <span>All scan activities</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <p>Safe Results</p>
+                <h2 id="statSafeScans">0</h2>
+                <span>Safe scan results</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon red">!</div>
+                <p>Threats Detected</p>
+                <h2 id="statThreatsDetected">0</h2>
+                <span>Potential threats found</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">↗</div>
+                <p>Protection Score</p>
+                <h2 id="statProtectionScore">100%</h2>
+                <span>Calculated security health</span>
+            </div>
+
+        </section>
+
+        <section class="tools-section">
+
+            <div class="section-heading">
+                <h2>Security Tools</h2>
+                <p>Choose a tool to analyze potential threats.</p>
+            </div>
+
+            <div class="tools-grid">
+
+                <div class="tool-card">
+                    <div class="tool-icon">🔗</div>
+                    <h3>URL Scanner</h3>
+                    <p>Check suspicious URLs and identify potentially unsafe websites.</p>
+                    <a href="url_scanner.html" class="tool-link">Open Scanner →</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">✉️</div>
+                    <h3>Email Analyzer</h3>
+                    <p>Analyze email content for suspicious messages and phishing indicators.</p>
+                    <a href="email_analyzer.html" class="tool-link">Analyze Email →</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h3>Security Reports</h3>
+                    <p>Review your previous security scans and their results.</p>
+                    <a href="reports.html" class="tool-link">View Reports →</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🎓</div>
+                    <h3>Awareness Hub</h3>
+                    <p>Practice simulated phishing challenges and safe browsing protocols.</p>
+                    <a href="training.html" class="tool-link">Start Training →</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">💼</div>
+                    <h3>Plans & Tiers</h3>
+                    <p>Explore startup subscriptions, campus plans, and enterprise security.</p>
+                    <a href="pricing.html" class="tool-link">Explore Plans →</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="activity-section">
+
+            <div class="section-heading">
+                <h2>Recent Activity</h2>
+                <p>Your latest security scan history.</p>
+            </div>
+
+            <div class="activity-table-wrapper">
+
+                <table class="activity-table">
+                    <thead>
+                        <tr>
+                            <th>Target</th>
+                            <th>Scan Type</th>
+                            <th>Result</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recentScansTableBody">
+                        <tr>
+                            <td colspan="4" class="empty-state">
+                                Loading scan activity...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            © 2026 SecureNet. All rights reserved.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

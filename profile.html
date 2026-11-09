@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | SecureNet</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+<div class="profile-container">
+
+    <header class="profile-header">
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+        <h1>My Profile</h1>
+        <p>Manage your personal information and account details.</p>
+    </header>
+
+    <section class="profile-card">
+
+        <div class="profile-top">
+            <div class="avatar" id="profileAvatar">U</div>
+
+            <div>
+                <h2 id="profileName">User</h2>
+                <p id="profileEmail">user@example.com</p>
+                <span class="account-status">● Active Account</span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="section-title">
+            <h3>Personal Information</h3>
+            <button id="editButton" class="edit-btn">Edit Profile</button>
+        </div>
+
+        <form id="profileForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label>Account Type</label>
+                    <input type="text" value="Standard User" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label>Account Created</label>
+                    <input type="text" id="createdAt" disabled>
+                </div>
+
+            </div>
+
+            <div class="form-actions" id="formActions">
+                <button type="submit" class="save-btn">Save Changes</button>
+                <button type="button" id="cancelButton" class="cancel-btn">
+                    Cancel
+                </button>
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="activity-card">
+
+        <h3>Security Activity</h3>
+
+        <div class="activity-grid">
+
+            <div class="activity-box">
+                <span>Total Scans</span>
+                <h2 id="totalScans">0</h2>
+            </div>
+
+            <div class="activity-box">
+                <span>Safe Results</span>
+                <h2 id="safeScans">0</h2>
+            </div>
+
+            <div class="activity-box">
+                <span>Threats Detected</span>
+                <h2 id="threatScans">0</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 SecureNet. Academic Project Prototype.
+    </footer>
+
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Plans & Solutions | SecureNet</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/email_analyzer.css">
+    <link rel="stylesheet" href="css/pricing.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="logo">Secure<span>Net</span></a>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">▦ Dashboard</a>
+            <a href="url_scanner.html" class="nav-item">🔗 URL Scanner</a>
+            <a href="email_analyzer.html" class="nav-item">✉ Email Analyzer</a>
+            <a href="reports.html" class="nav-item">▤ Reports</a>
+            <a href="training.html" class="nav-item">🎓 Awareness Hub</a>
+            <a href="pricing.html" class="nav-item active">💼 Plans & Tiers</a>
+        </nav>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="nav-item">👤 My Profile</a>
+            <a href="#" class="nav-item">⚙ Settings</a>
+            <a href="index.html" class="nav-item">↪ Logout</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            SecureNet Protection Active
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div>
+                <h2>Startup Business Model & Solutions</h2>
+                <p>Subscription tiers designed for students, institutions, and enterprise networks.</p>
+            </div>
+
+            <a href="profile.html" class="user-profile">
+                <div class="user-avatar" id="dashboardAvatar">U</div>
+                <span id="dashboardUserName">User</span>
+            </a>
+        </header>
+
+        <div class="pricing-intro">
+            <h2>Scalable Cybersecurity Solutions</h2>
+            <p>From individual community defense to campus-wide phishing simulations and managed security audits.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+            <!-- Community / Individual Plan -->
+            <div class="pricing-card">
+                <div>
+                    <div class="pricing-card-header">
+                        <h3>Community Shield</h3>
+                        <span class="pricing-target">For Individuals & Students</span>
+                    </div>
+                    <div class="pricing-price">₹0 <span>/ month</span></div>
+
+                    <ul class="pricing-features">
+                        <li><span>✓</span> URL & Domain Security Scanner</li>
+                        <li><span>✓</span> Email Threat Classifier</li>
+                        <li><span>✓</span> Awareness Training Modules</li>
+                        <li><span>✓</span> Personal Scan History</li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-plan" onclick="alert('Current active tier.')">Active Plan</button>
+            </div>
+
+            <!-- Campus / Institutional Plan -->
+            <div class="pricing-card featured">
+                <span class="pricing-badge">Popular for Colleges</span>
+                <div>
+                    <div class="pricing-card-header">
+                        <h3>Campus Guard</h3>
+                        <span class="pricing-target">For Schools & Colleges</span>
+                    </div>
+                    <div class="pricing-price">₹4,999 <span>/ month</span></div>
+
+                    <ul class="pricing-features">
+                        <li><span>✓</span> All Community Features</li>
+                        <li><span>✓</span> Unlimited Automated Threat Scans</li>
+                        <li><span>✓</span> Simulated Phishing Campaigns</li>
+                        <li><span>✓</span> Exportable Institutional CSV Reports</li>
+                        <li><span>✓</span> Centralized Department Dashboard</li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-plan primary" onclick="alert('Institutional onboarding request submitted for review.')">Select Institutional Plan</button>
+            </div>
+
+            <!-- Enterprise / Business Plan -->
+            <div class="pricing-card">
+                <div>
+                    <div class="pricing-card-header">
+                        <h3>Enterprise Defense</h3>
+                        <span class="pricing-target">For Businesses & Startups</span>
+                    </div>
+                    <div class="pricing-price">₹12,499 <span>/ month</span></div>
+
+                    <ul class="pricing-features">
+                        <li><span>✓</span> All Campus Guard Capabilities</li>
+                        <li><span>✓</span> Secure REST API Webhook Access</li>
+                        <li><span>✓</span> Real-Time Spear-Phishing Interception</li>
+                        <li><span>✓</span> Priority Threat Intelligence Feeds</li>
+                        <li><span>✓</span> Managed Cybersecurity Consulting</li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-plan" onclick="alert('Sales engineering team will contact you.')">Contact Enterprise Sales</button>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

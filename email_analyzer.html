@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Threat Analyzer | SecureNet</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/email_analyzer.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="logo">Secure<span>Net</span></a>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">▦ Dashboard</a>
+            <a href="url_scanner.html" class="nav-item">🔗 URL Scanner</a>
+            <a href="email_analyzer.html" class="nav-item active">✉ Email Analyzer</a>
+            <a href="reports.html" class="nav-item">▤ Reports</a>
+        </nav>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="nav-item">👤 My Profile</a>
+            <a href="#" class="nav-item">⚙ Settings</a>
+            <a href="index.html" class="nav-item">↪ Logout</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            SecureNet Protection Active
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div>
+                <h2>Email Threat Analyzer</h2>
+                <p>AI-assisted classification for phishing, financial fraud, and impersonation scams.</p>
+            </div>
+
+            <a href="profile.html" class="user-profile">
+                <div class="user-avatar" id="dashboardAvatar">T</div>
+                <span id="dashboardUserName">User</span>
+            </a>
+        </header>
+
+        <section class="analyzer-card">
+            <form id="emailForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="emailSubject">Subject Line</label>
+                    <input type="text" id="emailSubject" class="form-input" placeholder="e.g. Critical Security Alert: Immediate action required">
+                </div>
+
+                <div class="form-group">
+                    <label for="emailBody">Email Content</label>
+                    <textarea id="emailBody" class="form-textarea" placeholder="Paste the message content, raw email text, or suspicious notification..."></textarea>
+                </div>
+
+                <button type="button" class="btn-analyze" id="analyzeBtn">Analyze Threat</button>
+            </form>
+
+            <div class="result-box" id="resultBox">
+                <div class="verdict-header">
+                    <div>
+                        <span style="color: #94a3b8; font-size: 13px; display: block; margin-bottom: 4px;">Detected Classification</span>
+                        <h3><span id="threatTypeBadge" class="threat-type-badge">Evaluating...</span></h3>
+                    </div>
+                    <div>
+                        <span style="color: #94a3b8; font-size: 13px; display: block; margin-bottom: 4px;">Severity Level</span>
+                        <strong id="severityLabel" style="font-size: 16px;">Low</strong>
+                    </div>
+                </div>
+
+                <div class="meter-wrapper">
+                    <div class="meter-header">
+                        <span>Threat Likelihood</span>
+                        <strong id="likelihoodText">0%</strong>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="likelihoodBar"></div>
+                    </div>
+                </div>
+
+                <p id="mlPredictionNote"></p>
+
+                <div>
+                    <p style="color: #94a3b8; font-size: 13px; margin-bottom: 8px;">Subcategory Probability Match:</p>
+                    <div class="breakdown-grid" id="breakdownGrid"></div>
+                </div>
+
+                <div class="flags-section">
+                    <p class="flags-title">Identified Indicators & Patterns:</p>
+                    <ul class="flags-list" id="flagsList"></ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/email_analyzer.js"></script>
+
+</body>
+</html>

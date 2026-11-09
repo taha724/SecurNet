@@ -1,0 +1,401 @@
+/* Dashboard Layout */
+
+body {
+    background: #0b1220;
+    color: #ffffff;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    background: #111b2e;
+    border-right: 1px solid #24334c;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar .logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 45px;
+}
+
+.sidebar .logo span {
+    color: #3b82f6;
+}
+
+.sidebar-heading {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 20px 0 12px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: #1e3a5f;
+    color: #60a5fa;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 30px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Main Content */
+
+.dashboard-main {
+    flex: 1;
+    min-width: 0;
+    padding: 30px 38px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #24334c;
+}
+
+.dashboard-header h2 {
+    font-size: 22px;
+}
+
+.dashboard-header p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    background: #2563eb;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.welcome-section h1 {
+    font-size: 27px;
+    margin-bottom: 9px;
+}
+
+.welcome-section p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.security-label {
+    color: #4ade80;
+    background: #123324;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Statistics */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.stat-card {
+    background: #111b2e;
+    border: 1px solid #24334c;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.blue { background: #172e50; color: #60a5fa; }
+.green { background: #123324; color: #4ade80; }
+.red { background: #3b1c29; color: #f87171; }
+.purple { background: #30214d; color: #c084fc; }
+
+.stat-card p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+    margin: 9px 0;
+}
+
+.stat-card span {
+    color: #64748b;
+    font-size: 11px;
+}
+
+/* Security Tools */
+
+.tools-section,
+.activity-section {
+    margin-top: 45px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.tool-card {
+    background: #111b2e;
+    border: 1px solid #24334c;
+    border-radius: 12px;
+    padding: 24px;
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.tool-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.tool-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 65px;
+}
+
+.tool-link {
+    display: inline-block;
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 18px;
+}
+
+/* Activity Table */
+
+.activity-table-wrapper {
+    overflow-x: auto;
+    background: #111b2e;
+    border: 1px solid #24334c;
+    border-radius: 12px;
+}
+
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 550px;
+}
+
+.activity-table th,
+.activity-table td {
+    padding: 17px 20px;
+    border-bottom: 1px solid #24334c;
+    font-size: 13px;
+}
+
+.activity-table th {
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.activity-table td {
+    color: #cbd5e1;
+}
+
+.empty-state {
+    text-align: center;
+    color: #64748b !important;
+}
+
+.result-safe {
+    color: #4ade80 !important;
+}
+
+.result-danger {
+    color: #f87171 !important;
+}
+
+.dashboard-footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1100px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        transition: left 0.3s;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .dashboard-main {
+        padding: 22px 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dashboard-header {
+        gap: 12px;
+    }
+
+    .welcome-section {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .stats-grid,
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header h2 {
+        font-size: 18px;
+    }
+
+    .user-profile span {
+        display: none;
+    }
+
+    .welcome-section h1 {
+        font-size: 23px;
+    }
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.user-profile:hover {
+    background: #172640;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awareness & Training | SecureNet</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/email_analyzer.css">
+    <link rel="stylesheet" href="css/training.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="logo">Secure<span>Net</span></a>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">▦ Dashboard</a>
+            <a href="url_scanner.html" class="nav-item">🔗 URL Scanner</a>
+            <a href="email_analyzer.html" class="nav-item">✉ Email Analyzer</a>
+            <a href="reports.html" class="nav-item">▤ Reports</a>
+            <a href="training.html" class="nav-item active">🎓 Awareness Hub</a>
+        </nav>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="nav-item">👤 My Profile</a>
+            <a href="#" class="nav-item">⚙ Settings</a>
+            <a href="index.html" class="nav-item">↪ Logout</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            SecureNet Protection Active
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div>
+                <h2>Cybersecurity Awareness Training</h2>
+                <p>Safe browsing best practices and interactive threat detection challenges.</p>
+            </div>
+
+            <a href="profile.html" class="user-profile">
+                <div class="user-avatar" id="dashboardAvatar">U</div>
+                <span id="dashboardUserName">User</span>
+            </a>
+        </header>
+
+        <!-- Best Practice Guidelines -->
+        <div class="training-grid">
+            <div class="module-card">
+                <div>
+                    <div class="module-header">
+                        <div class="module-icon">🛡️</div>
+                        <div>
+                            <h3>Safe Browsing Hygiene</h3>
+                            <span style="color: #38bdf8; font-size: 12px;">Core Protocol</span>
+                        </div>
+                    </div>
+                    <p>Techniques to avoid malicious redirects, weaponized links, and deceptive top-level domains.</p>
+                    <ul class="tips-list">
+                        <li>Inspect full domain endings before entering credentials (watch for `.xyz`, `.top`).</li>
+                        <li>Never log in via raw IP address links (e.g., `http://192.168.x.x`).</li>
+                        <li>Verify SSL certificates on banking and campus portals.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <div>
+                    <div class="module-header">
+                        <div class="module-icon">🔍</div>
+                        <div>
+                            <h3>Phishing Red Flags</h3>
+                            <span style="color: #f59e0b; font-size: 12px;">Email Defense</span>
+                        </div>
+                    </div>
+                    <p>Identify social engineering signals and urgency coercion used by cyber adversaries.</p>
+                    <ul class="tips-list">
+                        <li>Look for artificial urgency like "account suspended within 24 hours".</li>
+                        <li>Watch for unverified sender aliases spoofing internal authorities.</li>
+                        <li>Refuse macro activation requests on email attachments (`.xlsm`, `.bat`).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <div>
+                    <div class="module-header">
+                        <div class="module-icon">🔐</div>
+                        <div>
+                            <h3>Identity & Credentials</h3>
+                            <span style="color: #22c55e; font-size: 12px;">Access Security</span>
+                        </div>
+                    </div>
+                    <p>Prevent credential leakage across educational institutions and workplace environments.</p>
+                    <ul class="tips-list">
+                        <li>Enforce multi-factor authentication (MFA) via hardware keys or authenticator apps.</li>
+                        <li>Never share one-time OTP passwords with phone or email callers.</li>
+                        <li>Isolate enterprise/student credentials from third-party non-academic sites.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Scenario Challenge -->
+        <section class="quiz-card">
+            <div class="section-heading" style="margin-bottom: 12px;">
+                <h2>Interactive Readiness Challenge</h2>
+                <p>Inspect the simulated attack sample below and submit your threat assessment.</p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span id="challengeCounter" style="color: #38bdf8; font-weight: 600; font-size: 14px;">Scenario 1 of 3</span>
+                <span id="scoreDisplay" style="color: #94a3b8; font-size: 13px;">Score: 0 / 0</span>
+            </div>
+
+            <div class="scenario-box" id="scenarioContent"></div>
+
+            <p style="color: #cbd5e1; font-size: 14px; font-weight: 500; margin-bottom: 8px;">Is this transmission Safe or Malicious?</p>
+
+            <div class="quiz-options">
+                <button type="button" class="btn-option" id="btnMalicious">⚠ Malicious Threat</button>
+                <button type="button" class="btn-option" id="btnLegitimate">✓ Safe / Legitimate</button>
+                <button type="button" class="btn-option" id="btnNext" style="display: none; background: #0284c7; border-color: #0284c7;">Next Scenario →</button>
+            </div>
+
+            <div class="quiz-feedback" id="quizFeedback"></div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/training.js"></script>
+
+</body>
+</html>

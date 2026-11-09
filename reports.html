@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Reports | SecureNet</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/email_analyzer.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="logo">Secure<span>Net</span></a>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">▦ Dashboard</a>
+            <a href="url_scanner.html" class="nav-item">🔗 URL Scanner</a>
+            <a href="email_analyzer.html" class="nav-item">✉ Email Analyzer</a>
+            <a href="reports.html" class="nav-item active">▤ Reports</a>
+        </nav>
+
+        <p class="sidebar-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="nav-item">👤 My Profile</a>
+            <a href="#" class="nav-item">⚙ Settings</a>
+            <a href="index.html" class="nav-item">↪ Logout</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            SecureNet Protection Active
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div>
+                <h2>Organizational Threat Reports</h2>
+                <p>Audit logging, threat breakdowns, and security compliance exports.</p>
+            </div>
+
+            <a href="profile.html" class="user-profile">
+                <div class="user-avatar" id="dashboardAvatar">U</div>
+                <span id="dashboardUserName">User</span>
+            </a>
+        </header>
+
+        <section class="analyzer-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+                <div style="display: flex; gap: 10px;">
+                    <select id="filterType" class="form-input" style="width: auto; padding: 8px 14px;">
+                        <option value="all">All Vectors</option>
+                        <option value="email">Email Scans</option>
+                        <option value="url">URL Scans</option>
+                    </select>
+
+                    <select id="filterSeverity" class="form-input" style="width: auto; padding: 8px 14px;">
+                        <option value="all">All Severities</option>
+                        <option value="critical">Critical Risk</option>
+                        <option value="moderate">Moderate Risk</option>
+                        <option value="low">Safe / Low Risk</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn-analyze" id="exportCsvBtn" style="padding: 10px 18px; margin: 0; width: auto;">
+                    ⬇ Export CSV Audit Report
+                </button>
+            </div>
+
+            <div class="activity-table-wrapper">
+                <table class="activity-table">
+                    <thead>
+                        <tr>
+                            <th>Target / Subject</th>
+                            <th>Vector</th>
+                            <th>Threat Verdict</th>
+                            <th>Risk Score</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportsTableBody">
+                        <tr>
+                            <td colspan="5" class="empty-state">Loading audit logs...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/reports.js"></script>
+
+</body>
+</html>
